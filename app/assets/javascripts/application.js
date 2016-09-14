@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require_tree .
 
-$('#login').click(function (event) {
-   Materialize.toast('I am a toast!', 3000, 'rounded')
+
+
+$(".test2button").click(function(){
+    $(".test2id").removeClass("disabled");
 });

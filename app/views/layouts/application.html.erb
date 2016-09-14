@@ -3,23 +3,20 @@
   <head>
     <title>Mgr</title>
     <%= csrf_meta_tags %>
-
+    
+    <%=stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons"%>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="cyan">
     <%=render 'layouts/header' %>
-    <p class="notice"><%= notice %>
-    <script type="text/javascript">
-         <!--
-            function sayHello() {
-               alert("Hello World")
-            }
-         //-->
-      </script>
-    </p>
+    <div class="container">
+    <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    
+    </div>
   </body>
 </html>
