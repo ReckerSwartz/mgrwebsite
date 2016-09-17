@@ -2,3 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "materialize";
+
+.sampleClass {float:left;}
+
+@media #{$large-and-up} {
+  
+  .sampleClass {float:none;}
+  
+}
+
+@media #{$medium-and-up} {
+      .side-nav{
+    margin-top:64px;
+}  
+}
+
+@media #{$small-and-down} {
+    .side-nav{
+    margin-top:56px;
+    .sampleClass {float:left;}
+}
+}

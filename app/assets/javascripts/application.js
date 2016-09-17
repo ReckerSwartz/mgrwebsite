@@ -16,8 +16,29 @@
 //= require turbolinks
 //= require_tree .
 
+$(document).on('turbolinks:load', function() {
 
-
-$(".test2button").click(function(){
-    $(".test2id").removeClass("disabled");
+  $(".button-collapse").sideNav();
+  $('.collapsible').collapsible();
+ 
+  $('.carousel.carousel-slider').carousel({full_width: true});
+  autoplay()   
+    function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 10000);
+    }
+  $('.button-collapse').sideNav({
+      menuWidth: 240 });
+  $(".button-collapse").off('click').sideNav({ closeOnClick: true });
+  
+  checkSize();
+  $(window).resize(checkSize);
 });
+
+function checkSize(){
+    if ($(".sampleClass").css("float") == "none" && $(".side-nav").length !=0){
+         $("#main").css("padding-left", "200px");
+    }else{
+      $("#main").css("padding-left", "0");
+    }
+  }
